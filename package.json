@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
+    "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/kwin555/pet-adoption-project#readme",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
+    "cross-env": "^6.0.3",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "^2.19.1",
@@ -34,6 +36,13 @@
     "react-dom": "^16.12.0"
   },
   "dependencies": {
-    "@frontendmasters/pet": "^1.0.3"
-  }
+    "@frontendmasters/pet": "^1.0.3",
+    "@reach/router": "^1.2.1"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 iOS versions"
+  ]
 }
