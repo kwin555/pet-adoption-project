@@ -11,7 +11,7 @@ class Carousel extends React.Component {
     if (media.length) {
       photos = media.map(({ large }) => large);
     }
-    return photos;
+    return { photos };
   }
 
   handleIndexClick = event => {
@@ -28,11 +28,10 @@ class Carousel extends React.Component {
         <img src={photos[active]} alt="animal" />
         <div className="carousel-smaller">
           {photos.map((photo, index) => (
-            // eslint-disable-next-line
             <img
               key={photo}
               data-index={index}
-              onClick={this.handleClick}
+              onClick={this.handleIndexClick}
               src={photo}
               className={index == active ? "active" : ""}
               alt="animal thumbnail"
